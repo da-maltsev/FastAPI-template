@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     # Redis
     REDIS_URL: RedisDsn
 
-    # Demployment
+    # Deployment
     IS_LOCAL: bool
 
     @validator("SQLALCHEMY_DATABASE_URI", pre=True)

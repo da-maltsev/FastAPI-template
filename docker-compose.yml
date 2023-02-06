@@ -150,6 +150,7 @@ services:
   redis:
     networks:
       - ${COMPOSE_PROJECT_NAME}
+    container_name: ${COMPOSE_PROJECT_NAME}_redis_${CELERY_WORKER_IMAGE_TAG:-local}
     image: redis:7-alpine
     depends_on:
       - traefik
